@@ -1,0 +1,194 @@
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="#topo" aria-label="Vienna English School">
+      <img class="brand__logo" src="images/logo.png" alt="Vienna English School" width="52" height="52">
+      <span class="brand__name">Vienna English School <small>Aulas online</small></span>
+    </a>
+    <a class="btn btn--sm" [href]="whatsappUrl" target="_blank" rel="noopener">Aula grátis</a>
+  </div>
+</header>
+
+<main id="topo">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow">Aulas de inglês online • Individuais e turmas reduzidas</p>
+        <h1>Fale inglês com confiança, no seu ritmo e do seu jeito.</h1>
+        <p class="lead">
+          Aprender inglês é sobre conquistar liberdade. Na Vienna English School, as aulas são
+          100% personalizadas para os seus objetivos. Comece com uma
+          <strong>aula experimental grátis</strong>, marcada pelo WhatsApp.
+        </p>
+        <a class="btn btn--lg" [href]="whatsappUrl" target="_blank" rel="noopener">
+          Agendar minha aula grátis no WhatsApp
+        </a>
+        <p class="hero__note">Sem compromisso. Resposta direta, sem formulário.</p>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="bubble bubble--a">Hello! How are you today?</div>
+        <div class="bubble bubble--b">I'm great, and ready to speak!</div>
+        <div class="bubble bubble--c">Let's start your first class!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA RÁPIDA -->
+  <section class="strip" aria-label="Destaques">
+    <ul class="container strip__list">
+      <li><app-icon name="gift" /> Aula experimental grátis</li>
+      <li><app-icon name="laptop" /> 100% online e ao vivo</li>
+      <li><app-icon name="users" /> Individuais e turmas reduzidas</li>
+      <li><app-icon name="book" /> Material incluso na plataforma</li>
+    </ul>
+  </section>
+
+  <!-- PROBLEMA E SOLUÇÃO -->
+  <section class="section">
+    <div class="container">
+      <h2>Por que aprender inglês parece tão difícil?</h2>
+      <p class="section__lead">A resposta costuma estar na forma como o idioma é ensinado. Se algum destes pontos soa familiar, as aulas foram pensadas para você.</p>
+      <div class="grid grid--3">
+        @for (p of pains; track p.title) {
+          <article class="card">
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section section--tint">
+    <div class="container">
+      <h2>Como funciona</h2>
+      <ol class="steps">
+        @for (s of steps; track s.title; let i = $index) {
+          <li class="step">
+            <span class="step__num">{{ i + 1 }}</span>
+            <h3>{{ s.title }}</h3>
+            <p>{{ s.text }}</p>
+          </li>
+        }
+      </ol>
+      <div class="center">
+        <a class="btn" [href]="whatsappUrl" target="_blank" rel="noopener">Quero começar pela aula grátis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section class="section">
+    <div class="container">
+      <h2>Inglês para qualquer objetivo</h2>
+      <p class="section__lead">Seja qual for o seu motivo, o conteúdo é montado em volta dele.</p>
+      <div class="grid grid--3">
+        @for (a of audiences; track a.title) {
+          <article class="card card--icon">
+            <span class="card__icon"><app-icon [name]="a.icon" /></span>
+            <h3>{{ a.title }}</h3>
+            <p>{{ a.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="section section--dark">
+    <div class="container">
+      <h2>Por que estudar na Vienna English School</h2>
+      <div class="grid grid--4">
+        @for (d of differentials; track d.title) {
+          <article class="diff">
+            <h3>{{ d.title }}</h3>
+            <p>{{ d.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="section">
+    <div class="container">
+      <h2>O que dizem os alunos</h2>
+      <p class="section__lead notice">Espaço reservado: troque pelos depoimentos reais antes de publicar.</p>
+      <div class="grid grid--3">
+        @for (t of testimonials; track $index) {
+          <figure class="quote">
+            <blockquote>“{{ t.quote }}”</blockquote>
+            <figcaption><strong>{{ t.name }}</strong><br>{{ t.role }}</figcaption>
+          </figure>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section section--tint">
+    <div class="container about">
+      <img class="about__photo" src="images/professora.png" alt="Raissa Rafaela, professora e fundadora da Vienna English School" width="641" height="513" loading="lazy">
+      <div>
+        <h2>Prazer, sou a Raissa</h2>
+        <p>
+          Sou estudante de Letras na UNESP e fundadora da Vienna English School.
+          Tenho ampla experiência na elaboração de aulas e materiais didáticos, e a minha
+          maior motivação é ver a evolução de cada aluno no seu próprio tempo.
+        </p>
+        <p>
+          Acredito que o aprendizado de um novo idioma é uma jornada contínua, por isso
+          estou sempre em busca de novas metodologias para oferecer a melhor experiência de ensino possível.
+        </p>
+        <ul class="about__list">
+          @for (point of aboutPoints; track point) {
+            <li>{{ point }}</li>
+          }
+        </ul>
+        <a class="btn" [href]="whatsappUrl" target="_blank" rel="noopener">Falar com a Raissa no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Perguntas frequentes</h2>
+      <div class="faq">
+        @for (f of faqs; track f.q) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final">
+    <div class="container center">
+      <h2>Veja o inglês com outros olhos.</h2>
+      <p class="lead">Agende sua aula experimental gratuita, escolha o melhor horário e comece a falar com confiança.</p>
+      <a class="btn btn--lg" [href]="whatsappUrl" target="_blank" rel="noopener">
+        Agendar aula experimental grátis
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© {{ year }} Vienna English School · Raissa Rafaela</p>
+    <p>
+      <a [href]="whatsappUrl" target="_blank" rel="noopener">WhatsApp {{ whatsappLabel }}</a> ·
+      <a [href]="instagramUrl" target="_blank" rel="noopener">&#64;raissa_rafa25</a>
+    </p>
+  </div>
+</footer>
+
+<a class="sticky-cta" [href]="whatsappUrl" target="_blank" rel="noopener">
+  Aula experimental grátis no WhatsApp
+</a>
