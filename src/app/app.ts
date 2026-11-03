@@ -39,13 +39,13 @@ export class App {
     { icon: 'plane' as const, title: 'Viagem e intercâmbio', text: 'Se virar em qualquer lugar do mundo.' },
     { icon: 'cap' as const, title: 'Provas e certificações', text: 'Conteúdo direcionado ao exame que você quer fazer.' },
     { icon: 'sprout' as const, title: 'Começando do zero', text: 'Não precisa saber nada: as aulas se adaptam ao seu nível atual.' },
-    { icon: 'book' as const, title: 'Por prazer e cultura', text: 'Filmes, séries e músicas fazem parte das aulas.' }
+    { icon: 'book' as const, title: 'Por prazer e cultura', text: 'As músicas, séries e filmes que você ama fazem parte das aulas.' }
   ];
 
   protected readonly differentials = [
     { title: 'Comunicação real', text: 'O foco é falar com confiança, sem métodos engessados e no seu ritmo.' },
     { title: 'Materiais personalizados', text: 'Conteúdo sob medida para os seus objetivos, com material incluso na plataforma.' },
-    { title: 'Leve e cultural', text: 'Aulas descontraídas, com filmes, séries e músicas.' },
+    { title: 'Leve e cultural', text: 'Aulas descontraídas, montadas com as músicas, séries e filmes de que você gosta.' },
     { title: 'Individual ou turma reduzida', text: 'Conversação e do básico ao avançado, com atenção para cada aluno.' }
   ];
 
@@ -56,11 +56,16 @@ export class App {
     'Busco trazer o inglês em contexto para a sua vida.'
   ];
 
-  // TODO: substituir por depoimentos reais (com autorização) antes de publicar
-  protected readonly testimonials = [
-    { quote: 'Depoimento de exemplo: conte aqui o que mudou depois de começar as aulas.', name: 'Nome do aluno', role: 'Profissão ou objetivo' },
-    { quote: 'Depoimento de exemplo: fale do ambiente das aulas e do resultado.', name: 'Nome do aluno', role: 'Profissão ou objetivo' },
-    { quote: 'Depoimento de exemplo: um resultado concreto, como uma viagem ou entrevista.', name: 'Nome do aluno', role: 'Profissão ou objetivo' }
+  // Referências de cultura pop usadas nas aulas. As perguntas são exemplos próprios (sem trechos de letras ou falas).
+  protected readonly music = [
+    { name: 'Michael Jackson', text: 'Pop clássico para treinar pronúncia e falar de sentimentos.', question: 'What feeling does this song give you?' },
+    { name: 'Selena Quintanilla', text: 'Uma artista que cruzou idiomas e culturas, ótima para conversar sobre identidade.', question: 'Why is she an icon for so many people?' },
+    { name: 'Taylor Swift', text: 'Letras que contam histórias, boas para escuta e vocabulário.', question: 'What story is this song telling?' }
+  ];
+
+  protected readonly shows = [
+    { name: 'Gilmore Girls', text: 'Diálogos rápidos, bons para treinar a escuta e o ritmo da conversa.', question: 'Can you retell this scene in your own words?' },
+    { name: 'Supernatural', text: 'Humor, gírias e expressões do dia a dia, sempre em contexto.', question: 'Which expression in this scene is new to you?' }
   ];
 
   protected readonly faqs = [

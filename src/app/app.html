@@ -16,8 +16,8 @@
         <p class="eyebrow">Aulas de inglês online • Individuais e turmas reduzidas</p>
         <h1>Fale inglês com confiança, no seu ritmo e do seu jeito.</h1>
         <p class="lead">
-          Aprender inglês é sobre conquistar liberdade. Na Vienna English School, as aulas são
-          100% personalizadas para os seus objetivos. Comece com uma
+          Aprender inglês é sobre conquistar liberdade. Na Vienna English School, cada aula é
+          montada para você, com as <strong>músicas, séries e filmes</strong> que você ama. Comece com uma
           <strong>aula experimental grátis</strong>, marcada pelo WhatsApp.
         </p>
         <a class="btn btn--lg" [href]="whatsappUrl" target="_blank" rel="noopener">
@@ -27,9 +27,9 @@
       </div>
 
       <div class="hero__visual" aria-hidden="true">
-        <div class="bubble bubble--a">Hello! How are you today?</div>
-        <div class="bubble bubble--b">I'm great, and ready to speak!</div>
-        <div class="bubble bubble--c">Let's start your first class!</div>
+        <div class="bubble bubble--a">What's your favorite song?</div>
+        <div class="bubble bubble--b">Taylor Swift! Can we study it?</div>
+        <div class="bubble bubble--c">Of course. Let's start!</div>
       </div>
     </div>
   </section>
@@ -60,8 +60,62 @@
     </div>
   </section>
 
+  <!-- AULA SOB MEDIDA: CULTURA POP -->
+  <section class="section section--tint" id="aula-sob-medida">
+    <div class="container">
+      <p class="eyebrow">Aula sob medida</p>
+      <h2>Aprenda inglês com o que você já ama</h2>
+      <p class="section__lead">
+        Em vez de textos genéricos, a Raissa monta a aula a partir dos seus gostos. Estas são
+        algumas das referências que ela leva para as aulas, e a sua lista pode ser outra.
+      </p>
+
+      <div class="pop__grid">
+        <article class="sleeve">
+          <span class="vinyl" aria-hidden="true"></span>
+          <p class="sleeve__tag">Lado A</p>
+          <h3>Música</h3>
+          <ol class="tracks">
+            @for (m of music; track m.name; let i = $index) {
+              <li class="track">
+                <span class="track__num">{{ '0' + (i + 1) }}</span>
+                <div>
+                  <strong class="track__name">{{ m.name }}</strong>
+                  <p>{{ m.text }}</p>
+                  <p class="track__q"><span>Pergunta de aula</span> <em lang="en">“{{ m.question }}”</em></p>
+                </div>
+              </li>
+            }
+          </ol>
+        </article>
+
+        <article class="sleeve sleeve--screen">
+          <p class="sleeve__tag">Lado B</p>
+          <h3>Séries e filmes</h3>
+          <ol class="tracks">
+            @for (s of shows; track s.name; let i = $index) {
+              <li class="track">
+                <span class="track__num">{{ '0' + (i + 1) }}</span>
+                <div>
+                  <strong class="track__name">{{ s.name }}</strong>
+                  <p>{{ s.text }}</p>
+                  <p class="track__q"><span>Pergunta de aula</span> <em lang="en">“{{ s.question }}”</em></p>
+                </div>
+              </li>
+            }
+          </ol>
+        </article>
+      </div>
+
+      <div class="pop__more">
+        <p><strong>E a sua lista?</strong> Conte para a Raissa o que você gosta de ouvir e assistir, e o seu plano de aula nasce daí.</p>
+        <a class="btn" [href]="whatsappUrl" target="_blank" rel="noopener">Quero uma aula com as minhas referências</a>
+      </div>
+    </div>
+  </section>
+
   <!-- COMO FUNCIONA -->
-  <section class="section section--tint">
+  <section class="section">
     <div class="container">
       <h2>Como funciona</h2>
       <ol class="steps">
@@ -80,7 +134,7 @@
   </section>
 
   <!-- PARA QUEM É -->
-  <section class="section">
+  <section class="section section--tint">
     <div class="container">
       <h2>Inglês para qualquer objetivo</h2>
       <p class="section__lead">Seja qual for o seu motivo, o conteúdo é montado em volta dele.</p>
@@ -106,22 +160,6 @@
             <h3>{{ d.title }}</h3>
             <p>{{ d.text }}</p>
           </article>
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS -->
-  <section class="section">
-    <div class="container">
-      <h2>O que dizem os alunos</h2>
-      <p class="section__lead notice">Espaço reservado: troque pelos depoimentos reais antes de publicar.</p>
-      <div class="grid grid--3">
-        @for (t of testimonials; track $index) {
-          <figure class="quote">
-            <blockquote>“{{ t.quote }}”</blockquote>
-            <figcaption><strong>{{ t.name }}</strong><br>{{ t.role }}</figcaption>
-          </figure>
         }
       </div>
     </div>
@@ -185,6 +223,10 @@
     <p>
       <a [href]="whatsappUrl" target="_blank" rel="noopener">WhatsApp {{ whatsappLabel }}</a> ·
       <a [href]="instagramUrl" target="_blank" rel="noopener">&#64;raissa_rafa25</a>
+    </p>
+    <p class="footer__legal">
+      Artistas, séries e filmes citados são referências de conteúdo usadas nas aulas. Os nomes
+      pertencem aos seus respectivos titulares, sem vínculo ou endosso.
     </p>
   </div>
 </footer>
