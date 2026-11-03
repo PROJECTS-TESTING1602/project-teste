@@ -143,3 +143,9 @@ h2 { font-size: clamp(1.7rem, 4.5vw, 2.5rem); }
   .sticky-cta { display: none; }
   .footer { padding-bottom: 24px; }
 }
+
+/* Celular: um único botão de aula experimental, o fixo no rodapé da tela */
+@media (max-width: 759px) {
+  .header .btn, main .btn, .hero__note { display: none; }
+  .pop__more p { margin-bottom: 0; }
+}
